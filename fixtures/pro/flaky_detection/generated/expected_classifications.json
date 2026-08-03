@@ -1,0 +1,56 @@
+{
+  "alu.stable_pass": {
+    "classification": "stable",
+    "score": 0.0,
+    "totalRuns": 28,
+    "passRuns": 28,
+    "failRuns": 0,
+    "otherRuns": 0,
+    "statusFlips": 0
+  },
+  "alu.broken_always": {
+    "classification": "consistentlyFailing",
+    "score": 1.0,
+    "totalRuns": 28,
+    "passRuns": 0,
+    "failRuns": 28,
+    "otherRuns": 0,
+    "statusFlips": 0
+  },
+  "alu.intermittent_old": {
+    "classification": "intermittent",
+    "score": 0.00004,
+    "totalRuns": 28,
+    "passRuns": 27,
+    "failRuns": 1,
+    "otherRuns": 0,
+    "statusFlips": 2
+  },
+  "fifo.flaky_toggle": {
+    "classification": "flaky",
+    "score": 0.219563,
+    "totalRuns": 28,
+    "passRuns": 24,
+    "failRuns": 4,
+    "otherRuns": 0,
+    "statusFlips": 8
+  },
+  "fifo.highly_flaky": {
+    "classification": "highlyFlaky",
+    "score": 0.771416,
+    "totalRuns": 28,
+    "passRuns": 12,
+    "failRuns": 16,
+    "otherRuns": 0,
+    "statusFlips": 19
+  },
+  "uart.noisy_skips": {
+    "classification": "flaky",
+    "score": 0.210057,
+    "totalRuns": 28,
+    "passRuns": 22,
+    "failRuns": 1,
+    "otherRuns": 5,
+    "statusFlips": 2
+  }
+}
