@@ -24,9 +24,6 @@ point for the beta:
   in Discussions, so it can be discussed and upvoted.
 - 🙋 **[Ask a question / get help](../../discussions/categories/q-a)** — in Discussions.
 - 📋 **[Release notes](RELEASES.md)** — what changed in each beta build.
-- ▶️ **[Run an example](examples/)** — two ready-to-open `simcrux.yaml`
-  projects that **need no simulator and no RISC-V toolchain**, and produce a
-  real mixed pass/fail report. See [`examples/README.md`](examples/README.md).
 - 📂 **[Browse the test fixtures](fixtures/)** — *this is what SimCrux tests
   against.* See [`fixtures/README.md`](fixtures/README.md).
 
@@ -90,7 +87,6 @@ in the triage queue, not the discussion stream.
 | [`RELEASES.md`](RELEASES.md) | What changed in each beta build. |
 | [`docs/BETA_GUIDE.md`](docs/BETA_GUIDE.md) | How to join the beta, what to test, how feedback is handled, what you get for contributing. |
 | [`docs/SUBMITTING_FIXTURES.md`](docs/SUBMITTING_FIXTURES.md) | How to contribute a regression-project fixture (and the license rules). |
-| [`examples/`](examples/) | Ready-to-open configs you run in the app. Neither needs a simulator or a toolchain. |
 | [`fixtures/`](fixtures/) | The regression + orchestration test-fixture corpus SimCrux is tested against. |
 | [`.github/ISSUE_TEMPLATE/`](.github/ISSUE_TEMPLATE/) | Bug / fixture issue forms (feature ideas go to Discussions). |
 
