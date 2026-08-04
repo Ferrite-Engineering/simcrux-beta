@@ -6,6 +6,57 @@ is also where the download links are posted while the beta is opening up.
 
 ---
 
+## 0.6.0 — 2026-08-04
+
+A RISC-V release. SimCrux can now answer two questions a core team asks
+constantly: *does this core actually implement the ISA it claims?* and *does
+this property hold?* Both arrive with dashboards, an exportable report, and —
+when something fails — a counterexample that opens in WaveCrux on the exact
+cycle.
+
+### New
+
+- **RISC-V compatibility checking.** A new `riscv:` block in your project runs
+  the `riscv_arch` driver against your core and reports which extensions and
+  behaviours it genuinely implements versus what it advertises. It runs in demo
+  mode with no toolchain installed, so you can see the shape of the result
+  before committing to a setup.
+- **The Compatibility Dashboard (Pro).** A rollup across your configurations,
+  the core's own ISA attestation, and a signature diff showing exactly where
+  the implementation and the claim part company.
+- **An exportable compatibility report (Pro).** Provenance included — which
+  core, which toolchain, which run produced each result — so the artifact is
+  something you can hand to someone else and have it mean something.
+- **Bounded formal proofs.** The `riscv_formal` driver runs property proofs on
+  the existing job model, so proofs schedule and report like any other job.
+  Pro adds a **formal property dashboard** for the results.
+- **Counterexamples open in WaveCrux on the failing step.** When a proof fails,
+  the trace hands off with the relevant signals already on the canvas. If the
+  hand-off cannot land precisely, SimCrux now says so rather than leaving you
+  to wonder whether the cycle it picked was meaningful.
+- **`golden_compare` pass/fail detector.** Compare a DUT against a golden
+  reference and get the first divergent word, not a wall of diff.
+- **Two RISC-V demo projects that open with no toolchain.**
+
+### Fixed
+
+- **The dashboard's centre pane stops overflowing** at ordinary window sizes.
+- **Driver resolution keeps looking** past a plugin that declines a job,
+  instead of stopping there.
+- **The orchestration example project loads** — its corpus was incomplete.
+- **The formal demo corpus ships** — a `.gitignore` rule had been eating its
+  logs.
+
+### Also
+
+- **Linux requirements are now measured, not asserted.** Our published glibc
+  figure had drifted from what we actually shipped; every release build now
+  verifies it. SimCrux requires glibc 2.34, which means it runs on RHEL /
+  Rocky / AlmaLinux 9, Ubuntu 22.04+ and Debian 12+.
+- Other performance and quality enhancements.
+
+---
+
 ## 0.5.0 — 2026-07-31
 
 The release that makes two half-reachable features fully reachable — plugin
