@@ -6,6 +6,52 @@ is also where the download links are posted while the beta is opening up.
 
 ---
 
+## 0.7.0 — 2026-08-11
+
+A short release for SimCrux, and a pointed one: importing a real-world FuseSoC
+core file now works. The suite's new `.crux-project` manifest lands here too.
+
+### New
+
+- **One file opens a design in all four products.** Write a `.crux-project`
+  manifest at the root of your design — naming the dump, the RTL, the lint
+  project and the regression config — check it in next to the RTL, and open it
+  in any Crux product. SimCrux opens the `simulation` artifact. All four
+  products derive the same design identity from it, so cross-probing works
+  exactly as it does when you open each file by hand. Every path resolves
+  against the manifest's own directory, so the file travels with the
+  repository, and everything except `version` is optional. Open Core in all
+  four products.
+
+### Fixed
+
+- **The FuseSoC importer survives a real `.core` file.** SERV's `servant.core`
+  was the first non-toy CAPI2 file pointed at the importer, and it found four
+  problems — all of which would have hit any FuseSoC user on their first
+  import, because board-support core files are the norm in that ecosystem.
+  Synthesis and place-and-route targets (vivado, quartus, icestorm, openlane)
+  were being turned into simulation suites and handed to Icarus, which they can
+  never pass — 37 of them in that one file; they are now skipped with a
+  warning. Targets declaring the modern `flow: sim` API with
+  `flow_options: {tool: …}` fell through to the Icarus default instead of
+  running under the simulator they name. Conditional expressions such as
+  `tool_quartus? (…)` were passed through verbatim, so a filename containing a
+  `?` and a space reached the simulator and killed the run; flags are now
+  resolved per target. And every import wrote `simcrux.yaml`, so importing a
+  second core into the same directory silently destroyed the first — output is
+  named after its core now, and re-importing onto an open path re-reads it into
+  that tab. Import warnings also reach the GUI, which had been discarding them.
+  `servant.core` imports as 2 suites instead of 39.
+- **Imported RISC-V arch-test paths are portable.** The importer wrote
+  host-shaped test paths into the config; they are POSIX now, so a config
+  generated on Windows and checked in opens correctly on Linux and macOS.
+
+### Also
+
+- Other performance and quality enhancements.
+
+---
+
 ## 0.6.0 — 2026-08-04
 
 A RISC-V release. SimCrux can now answer two questions a core team asks
