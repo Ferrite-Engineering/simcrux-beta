@@ -16,8 +16,9 @@ Flutter runtime and no window.
 - **A headless `simcrux` binary for CI and Edalize nodes.** Every batch route —
   `--ci` with its export targets and pass/fail gates, `--import-fusesoc`, the
   RISC-V arch-test and formal importers, dashboard export — now lives in a
-  standalone executable built by `tool/build_cli.sh`, with no Flutter engine
-  behind it. Previously those branches ran inside the app's bootstrap, which
+  standalone executable with no Flutter engine behind it. **Build it from the
+  repository with `tool/build_cli.sh`**; this release does not yet publish a
+  prebuilt binary the way LintCrux does, which is the next thing to fix. Previously those branches ran inside the app's bootstrap, which
   starts a graphical runtime before it reads its arguments; on a headless
   build node that is the wrong shape entirely. Exit codes are meaningful, an
   invocation with nothing headless to do exits non-zero rather than appearing
