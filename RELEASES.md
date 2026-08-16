@@ -6,6 +6,36 @@ is also where the download links are posted while the beta is opening up.
 
 ---
 
+## 0.8.0 — 2026-08-16
+
+SimCrux runs on a machine with no display: a standalone binary that needs no
+Flutter runtime and no window.
+
+### New
+
+- **A headless `simcrux` binary for CI and Edalize nodes.** Every batch route —
+  `--ci` with its export targets and pass/fail gates, `--import-fusesoc`, the
+  RISC-V arch-test and formal importers, dashboard export — now lives in a
+  standalone executable built by `tool/build_cli.sh`, with no Flutter engine
+  behind it. Previously those branches ran inside the app's bootstrap, which
+  starts a graphical runtime before it reads its arguments; on a headless
+  build node that is the wrong shape entirely. Exit codes are meaningful, an
+  invocation with nothing headless to do exits non-zero rather than appearing
+  to succeed, and the binary's telemetry is a no-op that never transmits.
+  Verified running a real Icarus regression with JUnit export.
+
+### Fixed
+
+- **Opening a file no longer breaks on macOS.** A file-picker dependency
+  update turned every Open File into a plugin error; backed out and pinned, in
+  all four products.
+
+### Also
+
+- Other performance and quality enhancements.
+
+---
+
 ## 0.7.0 — 2026-08-11
 
 A short release for SimCrux, and a pointed one: importing a real-world FuseSoC
