@@ -37,7 +37,7 @@ point for the beta:
 > (No Discord or Slack — Discussions keeps every answer searchable and in one
 > place.)
 
-SimCrux is part of the **EDA Crux** suite and cross-probes with its siblings over
+SimCrux is part of the **EDACrux** suite and cross-probes with its siblings over
 CXP. Their betas run the same way:
 [WaveCrux](https://github.com/Ferrite-Engineering/wavecrux-beta) ·
 [NetCrux](https://github.com/Ferrite-Engineering/netcrux-beta) ·
