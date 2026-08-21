@@ -6,6 +6,21 @@ is also where the download links are posted while the beta is opening up.
 
 ---
 
+## Unreleased
+
+### Fixed
+
+- **A corrupt or mid-upgrade `trends.db` can no longer lose your regression
+  history.** Every open of the trend database — the app-wide store and, in
+  Pro, each project's own `.simcrux/trends.db` — now backs the file up before
+  any schema upgrade, and a genuinely damaged file is renamed aside rather
+  than deleted, so the bytes are always still on disk afterwards. This closes
+  the last case where an open failure (a locked file, a bug in our own
+  migration code, a build mismatch) could be mistaken for corruption and
+  answered by silently starting over.
+
+---
+
 ## 0.8.0 — 2026-08-16
 
 SimCrux runs on a machine with no display: a standalone binary that needs no
