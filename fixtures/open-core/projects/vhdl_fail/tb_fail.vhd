@@ -1,5 +1,5 @@
 -- Tiny GHDL testbench that fires a `severity failure` assertion. The
--- Phase 2 integration fixture asserts the end-to-end orchestrator
+-- integration fixture asserts the end-to-end orchestrator
 -- classifies this as `fail`, validating the ghdl driver's exit-code
 -- and string-match detection paths.
 library ieee;

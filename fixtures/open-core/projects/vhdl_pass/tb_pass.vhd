@@ -1,5 +1,5 @@
 -- Tiny GHDL testbench that prints "TEST PASSED" then exits cleanly.
--- Used by the Phase 2 integration fixture to assert the end-to-end
+-- Used by the integration fixture to assert the end-to-end
 -- orchestrator (ConfigLoader → JobScheduler → GhdlDriver →
 -- PassFailDetectorRegistry → ResultStore → TestRun) wires together
 -- correctly when ghdl is available on the host.

@@ -1,12 +1,11 @@
 # riscv-formal demo corpus
 
 Pre-captured SymbiYosys outputs for `riscv: { mode: demo }` under the
-`riscv_formal` driver (edacrux/docs/plans/simcrux/simcrux-project-plan.md §15.10, VERIFICATION_GUIDE.md
-§18.3).
+`riscv_formal` driver.
 
 **Hand-authored. Nothing here is derived from riscv-formal, SymbiYosys or
 any other upstream project**, so no third-party attribution obligation is
-created — the same call B2 and B3 made for the signature corpus. The logs
+created — the same call made for the signature corpus. The logs
 are written in `sby`'s output shape because that is the shape the parser
 must handle; they describe proofs of a fictional core, and the traces are
 that fictional core's retire log.

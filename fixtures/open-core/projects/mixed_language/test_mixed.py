@@ -1,6 +1,6 @@
 """Stub Cocotb testbench module for the mixed-language fixture.
 
-Not exercised live in the Phase 2 config-load + routing fixture tests;
+Not exercised live in the config-load + routing fixture tests;
 it's here so the fixture's source list legitimately includes a Python
 testbench alongside its Verilog and VHDL files.
 """

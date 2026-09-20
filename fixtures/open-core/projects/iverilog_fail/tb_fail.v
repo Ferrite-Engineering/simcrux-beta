@@ -1,5 +1,5 @@
 // Tiny Icarus testbench that prints "TEST FAILED" then $finish-es.
-// Used by the Phase 1 integration fixture to assert the StringMatch
+// Used by the integration fixture to assert the StringMatch
 // detector classifies a fail-string match as TestStatus.fail end to
 // end.
 module tb_fail;

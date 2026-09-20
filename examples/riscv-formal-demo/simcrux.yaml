@@ -2,9 +2,9 @@
 #
 # Open this file with File → Open Config…, then Tools → Run Regression.
 #
-# Every test below runs the `riscv_formal` driver in `mode: demo`
-# (SIMCRUX_PROJECT_PLAN.md §15.10, §15.13): the driver replays the committed
-# SymbiYosys outputs under `fixtures/open-core/riscv_formal/` through the
+# Every test below runs the `riscv_formal` driver in `mode: demo`: the driver
+# replays the committed SymbiYosys outputs under
+# `fixtures/open-core/riscv_formal/` through the
 # *same* code path a real run takes — the captured log is fed line by line
 # into the same `SbyLogReader`, every line still reaches the stream as a
 # `TestLogLine` so the `string_match` detector sees exactly the text it would

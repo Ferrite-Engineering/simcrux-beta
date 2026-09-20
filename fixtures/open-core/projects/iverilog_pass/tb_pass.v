@@ -1,5 +1,5 @@
 // Tiny Icarus testbench that prints "TEST PASSED" then $finish-es
-// cleanly. Used by the Phase 1 integration fixture to assert the
+// cleanly. Used by the integration fixture to assert the
 // end-to-end orchestrator (ConfigLoader → JobScheduler → IcarusDriver
 // → PassFailDetectorRegistry → ResultStore → TestRun) wires together
 // correctly when iverilog is available on the host.

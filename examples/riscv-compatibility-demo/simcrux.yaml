@@ -2,9 +2,9 @@
 #
 # Open this file with File → Open Config…, then Tools → Run Regression.
 #
-# Every test below runs the `riscv_arch` driver in `mode: demo`
-# (SIMCRUX_PROJECT_PLAN.md §15.10): the driver replays the committed
-# signature pairs under `fixtures/open-core/golden_compare/` through the
+# Every test below runs the `riscv_arch` driver in `mode: demo`: the driver
+# replays the committed signature pairs under
+# `fixtures/open-core/golden_compare/` through the
 # *same* code path a real run takes — the same signature reading, the same
 # shared `GoldenComparator` call, the same metric emission, the same event
 # construction. Only the spawn steps (cross-compile, DUT run, reference-model

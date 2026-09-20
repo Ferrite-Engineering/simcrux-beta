@@ -1,4 +1,4 @@
-# Minimal Cocotb-style Makefile for the SimCrux Phase 2 fixture.
+# Minimal Cocotb-style Makefile for the SimCrux fixture.
 #
 # SimCrux's CocotbDriver invokes:
 #   make SIM=<sim> TOPLEVEL=dff [TOPLEVEL_LANG=verilog] [MODULE=test_dff]
