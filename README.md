@@ -1,5 +1,14 @@
 # SimCrux Beta
 
+> **The public beta has ended.** SimCrux 1.0 was released on 30 September 2026,
+> and this repository is archived as the record of the beta.
+>
+> - Source code, issues and discussions: https://github.com/Ferrite-Engineering/simcrux
+> - Release notes: https://github.com/Ferrite-Engineering/simcrux/releases
+> - Download: https://simcrux.app/download
+>
+> Thank you to everyone who tested the beta and reported what they found.
+
 Welcome to the home of the **SimCrux public beta** — this is where you report
 bugs, request features, get help, and browse the test-fixture corpus SimCrux is
 validated against.
